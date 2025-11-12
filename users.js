@@ -17,7 +17,7 @@ router.get('/:id', (req, res) => {
 }).put((res, res) => {
     res.send(`Updating user data: ${res.params.id}`)
 })
-
+const users = [{name: "George"}, {name: "Justyna"}]
 router.param("id", (req, res, next, id) => {
     console.log(`Accessing user #${id}`)
     next();
